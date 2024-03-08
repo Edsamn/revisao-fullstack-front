@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <h3>Cadastro de Produtos</h3>
+      <fieldset>
+        <label for="productName">Nome do Produto:</label>
+        <input type="text" id="productName" required />
+        <br />
+        <label for="productPrice">Preço do produto:</label>
+        <input type="text" id="productPrice" required />
+        <br />
+        <input type="submit" value="Criar produto" onclick="createProduct(event)" />
+      </fieldset>
+    </form>
+    <form>
+      <h3>Listar todos os produtos</h3>
+      <fieldset>
+        <input type="submit" id="listAllProducts" value="Listar" onclick="getAllProducts(event)" />
+      </fieldset>
+    </form>
+    <form>
+      <h3>Atualizar Produtos</h3>
+      <fieldset>
+        <label for="findProductName">Nome do produto para atualizar:</label>
+        <input type="text" id="findProductName" required />
+        <br />
+        <label for="updateProductName">Nome do produto atualizado:</label>
+        <input type="text" id="updateProductName" required />
+        <br />
+        <label for="updateProductPrice">Preço do produto atualizado:</label>
+        <input type="text" id="updateProductPrice" required />
+        <br />
+        <input type="submit" id="updateProductByName" value="Atualizar produto" onclick="updateProduct(event)" />
+      </fieldset>
+    </form>
+    <form>
+      <h3>Deletar produto</h3>
+      <fieldset>
+        <label for="deleteProductByName">Nome do produto para deletar:</label>
+        <input type="text" id="deleteProductByName" required />
+        <br />
+        <input type="submit" id="deleteProductByName" value="Deletar produto" onclick="deleteProduct(event)" />
+      </fieldset>
+    </form>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="api.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
